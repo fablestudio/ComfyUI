@@ -1,8 +1,55 @@
+# ComfyUI
+
+## The most powerful and modular stable diffusion GUI and backend.
+
+## Clone this Repo
+
+Open your terminal and type the following command:
+
+```bash
+git clone https://github.com/fablestudio/ComfyUI
+cd ComfyUI
+```
+
+## Install Project Dependencies
+
+### NVIDIA
+
+Nvidia users should install stable pytorch using this command:
+
+`pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121`
+
+This is the command to install pytorch nightly instead which might have performance improvements:
+
+`pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121`
+
+#### Troubleshooting
+
+If you get the "Torch not compiled with CUDA enabled" error, uninstall torch with:
+
+`pip uninstall torch`
+
+And install it again with the command above.
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+# Running
+
+`python main.py`
+
+# ComfyUI
+
+## The most powerful and modular stable diffusion GUI and backend.
+
 <div align="center">
 
 # ComfyUI
-**The most powerful and modular diffusion model GUI and backend.**
 
+**The most powerful and modular diffusion model GUI and backend.**
 
 [![Website][website-shield]][website-url]
 [![Dynamic JSON Badge][discord-shield]][discord-url]
@@ -17,10 +64,11 @@
 [matrix-url]: https://app.element.io/#/room/%23comfyui_space%3Amatrix.org
 [website-shield]: https://img.shields.io/badge/ComfyOrg-4285F4?style=flat
 [website-url]: https://www.comfy.org/
+
 <!-- Workaround to display total user from https://github.com/badges/shields/issues/4500#issuecomment-2060079995 -->
+
 [discord-shield]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fcomfyorg%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&logo=discord&logoColor=white&label=Discord&color=green&suffix=%20total
 [discord-url]: https://www.comfy.org/discord
-
 [github-release-shield]: https://img.shields.io/github/v/release/comfyanonymous/ComfyUI?style=flat&sort=semver
 [github-release-link]: https://github.com/comfyanonymous/ComfyUI/releases
 [github-release-date-shield]: https://img.shields.io/github/release-date/comfyanonymous/ComfyUI?style=flat
@@ -29,21 +77,24 @@
 [github-downloads-link]: https://github.com/comfyanonymous/ComfyUI/releases
 
 ![ComfyUI Screenshot](comfyui_screenshot.png)
+
 </div>
 
 This ui will let you design and execute advanced stable diffusion pipelines using a graph/nodes/flowchart based interface. For some workflow examples and see what ComfyUI can do you can check out:
+
 ### [ComfyUI Examples](https://comfyanonymous.github.io/ComfyUI_examples/)
 
 ### [Installing ComfyUI](#installing)
 
 ## Features
+
 - Nodes/graph/flowchart interface to experiment and create complex Stable Diffusion workflows without needing to code anything.
 - Fully supports SD1.x, SD2.x, [SDXL](https://comfyanonymous.github.io/ComfyUI_examples/sdxl/), [Stable Video Diffusion](https://comfyanonymous.github.io/ComfyUI_examples/video/), [Stable Cascade](https://comfyanonymous.github.io/ComfyUI_examples/stable_cascade/), [SD3](https://comfyanonymous.github.io/ComfyUI_examples/sd3/) and [Stable Audio](https://comfyanonymous.github.io/ComfyUI_examples/audio/)
 - [Flux](https://comfyanonymous.github.io/ComfyUI_examples/flux/)
 - Asynchronous Queue system
 - Many optimizations: Only re-executes the parts of the workflow that changes between executions.
 - Smart memory management: can automatically run models on GPUs with as low as 1GB vram.
-- Works even if you don't have a GPU with: ```--cpu``` (slow)
+- Works even if you don't have a GPU with: `--cpu` (slow)
 - Can load ckpt, safetensors and diffusers models/checkpoints. Standalone VAEs and CLIP models.
 - Embeddings/Textual inversion
 - [Loras (regular, locon and loha)](https://comfyanonymous.github.io/ComfyUI_examples/lora/)
@@ -72,7 +123,7 @@ Workflow examples can be found on the [Examples page](https://comfyanonymous.git
 ## Shortcuts
 
 | Keybind                            | Explanation                                                                                                        |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Ctrl + Enter                       | Queue up current graph for generation                                                                              |
 | Ctrl + Shift + Enter               | Queue up current graph as first for generation                                                                     |
 | Ctrl + Alt + Enter                 | Cancel current generation                                                                                          |
@@ -133,31 +184,31 @@ Put your SD checkpoints (the huge ckpt/safetensors files) in: models/checkpoints
 
 Put your VAE in: models/vae
 
-
 ### AMD GPUs (Linux only)
+
 AMD users can install rocm and pytorch with pip if you don't have it already installed, this is the command to install the stable version:
 
-```pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.1```
+`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.1`
 
 This is the command to install the nightly with ROCm 6.2 which might have some performance improvements:
 
-```pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.2```
+`pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.2`
 
 ### NVIDIA
 
 Nvidia users should install stable pytorch using this command:
 
-```pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124```
+`pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124`
 
 This is the command to install pytorch nightly instead which might have performance improvements:
 
-```pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu124```
+`pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu124`
 
 #### Troubleshooting
 
 If you get the "Torch not compiled with CUDA enabled" error, uninstall torch with:
 
-```pip uninstall torch```
+`pip uninstall torch`
 
 And install it again with the command above.
 
@@ -165,7 +216,7 @@ And install it again with the command above.
 
 Install the dependencies by opening your terminal inside the ComfyUI folder and:
 
-```pip install -r requirements.txt```
+`pip install -r requirements.txt`
 
 After this you should have everything installed and can proceed to running ComfyUI.
 
@@ -195,19 +246,19 @@ You can install ComfyUI in Apple Mac silicon (M1 or M2) with any recent macOS ve
 
 #### DirectML (AMD Cards on Windows)
 
-```pip install torch-directml``` Then you can launch ComfyUI with: ```python main.py --directml```
+`pip install torch-directml` Then you can launch ComfyUI with: `python main.py --directml`
 
 # Running
 
-```python main.py```
+`python main.py`
 
 ### For AMD cards not officially supported by ROCm
 
 Try running it with this command if you have issues:
 
-For 6700, 6600 and maybe other RDNA2 or older: ```HSA_OVERRIDE_GFX_VERSION=10.3.0 python main.py```
+For 6700, 6600 and maybe other RDNA2 or older: `HSA_OVERRIDE_GFX_VERSION=10.3.0 python main.py`
 
-For AMD 7600 and maybe other RDNA3 cards: ```HSA_OVERRIDE_GFX_VERSION=11.0.0 python main.py```
+For AMD 7600 and maybe other RDNA3 cards: `HSA_OVERRIDE_GFX_VERSION=11.0.0 python main.py`
 
 # Notes
 
@@ -225,22 +276,22 @@ Dynamic prompts also support C-style comments, like `// comment` or `/* comment 
 
 To use a textual inversion concepts/embeddings in a text prompt put them in the models/embeddings directory and use them in the CLIPTextEncode node like this (you can omit the .pt extension):
 
-```embedding:embedding_filename.pt```
-
+`embedding:embedding_filename.pt`
 
 ## How to show high-quality previews?
 
-Use ```--preview-method auto``` to enable previews.
+Use `--preview-method auto` to enable previews.
 
 The default installation includes a fast latent preview method that's low-resolution. To enable higher-quality previews with [TAESD](https://github.com/madebyollin/taesd), download the [taesd_decoder.pth, taesdxl_decoder.pth, taesd3_decoder.pth and taef1_decoder.pth](https://github.com/madebyollin/taesd/) and place them in the `models/vae_approx` folder. Once they're installed, restart ComfyUI and launch it with `--preview-method taesd` to enable high-quality previews.
 
 ## How to use TLS/SSL?
+
 Generate a self-signed certificate (not appropriate for shared/production use) and key by running the command: `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"`
 
 Use `--tls-keyfile key.pem --tls-certfile cert.pem` to enable TLS/SSL, the app will now be accessible with `https://...` instead of `http://...`.
 
-> Note: Windows users can use [alexisrolland/docker-openssl](https://github.com/alexisrolland/docker-openssl) or one of the [3rd party binary distributions](https://wiki.openssl.org/index.php/Binaries) to run the command example above. 
-<br/><br/>If you use a container, note that the volume mount `-v` can be a relative path so `... -v ".\:/openssl-certs" ...` would create the key & cert files in the current directory of your command prompt or powershell terminal.
+> Note: Windows users can use [alexisrolland/docker-openssl](https://github.com/alexisrolland/docker-openssl) or one of the [3rd party binary distributions](https://wiki.openssl.org/index.php/Binaries) to run the command example above.
+> <br/><br/>If you use a container, note that the volume mount `-v` can be a relative path so `... -v ".\:/openssl-certs" ...` would create the key & cert files in the current directory of your command prompt or powershell terminal.
 
 ## Support and dev channel
 
@@ -294,4 +345,3 @@ This will use a snapshot of the legacy frontend preserved in the [ComfyUI Legacy
 ### Which GPU should I buy for this?
 
 [See this page for some recommendations](https://github.com/comfyanonymous/ComfyUI/wiki/Which-GPU-should-I-buy-for-ComfyUI)
-
