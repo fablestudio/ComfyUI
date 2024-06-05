@@ -7,8 +7,8 @@
 Open your terminal and type the following command:
 
 ```bash
-git clone https://github.com/fablestudio/showrunner-batch-tools
-cd showrunner-batch-tools
+git clone https://github.com/fablestudio/ComfyUI
+cd ComfyUI
 ```
 
 ## Install Project Dependencies
