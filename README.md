@@ -62,8 +62,8 @@ Open browser at http://localhost:8188
 ## Install Recommended Models to get started
 Open Manager
 Install Models
-`checkpoints	 SDXL	 sd_xl_base_1.0.safetensors	 sd_xl_base_1.0.safetensors	Stable Diffusion XL base model`
-`lora	 SDXL	 SDXL Lightning LoRA (8step)	 sdxl_lightning_8step_lora.safetensors	SDXL Lightning LoRA (8tep)`
+`checkpoints	sd_xl_base_1.0.safetensors`
+`lora	SDXL Lightning LoRA (8step)	 sdxl_lightning_8step_lora.safetensors`
 
 ## Install Recommended Custom Nodes 
 (see github repos of individual plugins)
