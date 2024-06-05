@@ -13,6 +13,11 @@ cd ComfyUI
 
 ## Install Project Dependencies
 
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
 ### NVIDIA
 
 Nvidia users should install stable pytorch using this command:
