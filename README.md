@@ -37,6 +37,12 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+To install ComfyUI-Manager in addition to an existing installation of ComfyUI to add more custom nodes and models more easily
+
+goto ComfyUI/custom_nodes dir in terminal(cmd)
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+Restart ComfyUI
+
 # Running
 
 `python main.py`
