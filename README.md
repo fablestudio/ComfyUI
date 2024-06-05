@@ -31,21 +31,53 @@ If you get the "Torch not compiled with CUDA enabled" error, uninstall torch wit
 
 And install it again with the command above.
 
+## Install ComfyUI
+
 ```bash
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-To install ComfyUI-Manager in addition to an existing installation of ComfyUI to add more custom nodes and models more easily
+## Install Recommended Custom Nodes
 
-goto ComfyUI/custom_nodes dir in terminal(cmd)
+#### ComfyUI-Manager
+to add more custom nodes and models more easily
+```bash
+cd custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+```
 Restart ComfyUI
 
 # Running
 
 `python main.py`
+Open browser at http://localhost:8188
+
+## Install Recommended Models to get started
+Open Manager
+Install Models
+`checkpoints	 SDXL	 sd_xl_base_1.0.safetensors	 sd_xl_base_1.0.safetensors	Stable Diffusion XL base model`
+`lora	 SDXL	 SDXL Lightning LoRA (8step)	 sdxl_lightning_8step_lora.safetensors	SDXL Lightning LoRA (8tep)`
+
+## Install Recommended Custom Nodes 
+(see github repos of individual plugins)
+Add via custom nodes Manager or manual install
+```bash
+cd custom_nodes
+git clone <repo>
+```
+#### ComfyUI-Deploy
+#### ComfyUI Impact Pack
+#### ComfyUI Inspire Pack
+#### ComfyUI's ControlNet Auxiliary Preprocessors
+Install additional dependency for ONNX and CUDA 12 `pip install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/`
+#### ComfyUI-layerdiffuse (layerdiffusion)
+#### TensorRT Node for ComfyUI (experimental)
+
+### Helpful Links
+- Open Pose Library for testing https://openposes.com/ (paste image url into external image node from comfy deploy)
+- 
 
 # ComfyUI
 
