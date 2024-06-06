@@ -84,7 +84,11 @@ Install additional dependency for ONNX and CUDA 12 `pip install onnxruntime-gpu 
 
 ### Helpful Links
 - Open Pose Library for testing https://openposes.com/ (paste image url into external image node from comfy deploy)
-- 
+
+### Trouble Shooting
+- Stable Cascade:
+  Local file paths on windows do not get deployed correctly for comfydeploy. When the sets workflow works locally with stable cascade it requires backslash on windows, but forward slash to make comfyui deploy find the model in the /Stable-Cascade/ subfolders
+  To fix we can open the local api json in a text editor and replace "\\" with "/", reload it and deploy to comfydeploy.
 
 # ComfyUI
 
