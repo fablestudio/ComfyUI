@@ -44,7 +44,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Install Recommended Custom Nodes
+## Install ComfyUI Manager
 
 #### ComfyUI-Manager
 to add more custom nodes and models more easily
@@ -62,10 +62,10 @@ Open browser at http://localhost:8188
 ## Install Recommended Models to get started
 Open Manager
 Install Models
-`checkpoints	sd_xl_base_1.0.safetensors`
-`lora	SDXL Lightning LoRA (8step)	 sdxl_lightning_8step_lora.safetensors`
+- checkpoints	sd_xl_base_1.0.safetensors
+- lora	SDXL Lightning LoRA (8step)	 sdxl_lightning_8step_lora.safetensors
 
-## Install Recommended Custom Nodes 
+## Install Recommended Custom Nodes via Manager 
 (see github repos of individual plugins)
 Add via custom nodes Manager or manual install
 ```bash
@@ -78,6 +78,8 @@ git clone <repo>
 #### ComfyUI's ControlNet Auxiliary Preprocessors
 Install additional dependency for ONNX and CUDA 12 `pip install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/`
 #### ComfyUI-layerdiffuse (layerdiffusion)
+#### WAS Node Suite
+#### ComfyUI_IPAdapter_plus
 #### TensorRT Node for ComfyUI (experimental)
 
 ### Helpful Links
