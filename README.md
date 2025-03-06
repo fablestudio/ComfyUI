@@ -100,6 +100,7 @@ Install additional dependency for ONNX and CUDA 12 `pip install onnxruntime-gpu 
 
 **The most powerful and modular visual AI engine and application.**
 
+
 [![Website][website-shield]][website-url]
 [![Dynamic JSON Badge][discord-shield]][discord-url]
 [![Matrix][matrix-shield]][matrix-url]
@@ -125,6 +126,7 @@ Install additional dependency for ONNX and CUDA 12 `pip install onnxruntime-gpu 
 [github-downloads-latest-shield]: https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/latest/total?style=flat&label=downloads%40latest
 [github-downloads-link]: https://github.com/comfyanonymous/ComfyUI/releases
 
+
 ![ComfyUI Screenshot](https://github.com/user-attachments/assets/7ccaf2c1-9b72-41ae-9a89-5688c94b7abe)
 
 </div>
@@ -139,6 +141,7 @@ ComfyUI lets you design and execute advanced stable diffusion pipelines using a 
 - Available on Windows & macOS.
 
 #### [Windows Portable Package](#installing)
+
 
 - Get the latest commits and completely portable.
 - Available on Windows.
@@ -236,6 +239,7 @@ Workflow examples can be found on the [Examples page](https://comfyanonymous.git
 
 `Ctrl` can also be replaced with `Cmd` instead for macOS users
 
+
 # Installing
 
 ## Windows Portable
@@ -281,6 +285,7 @@ Put your VAE in: models/vae
 
 AMD users can install rocm and pytorch with pip if you don't have it already installed, this is the command to install the stable version:
 
+
 `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.2.4`
 
 This is the command to install the nightly with ROCm 6.3 which might have some performance improvements:
@@ -294,6 +299,7 @@ This is the command to install the nightly with ROCm 6.3 which might have some p
 1. To install PyTorch nightly, use the following command:
 
 `pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/xpu`
+
 
 2. Launch ComfyUI by running `python main.py`
 
